@@ -1,0 +1,54 @@
+
+ALGORITHM read_a_sentence
+
+// Declaring of variables 
+
+VAR
+    Str:STRING;
+    chr: CHAR;
+    countWords : INTEGER:=1;
+    countVowel :INTEGER:=0;
+    lenghtStr :INTEGER:=0;
+
+BEGIN
+
+//Initialisation 
+
+Write ('write a string that determined by a '.');
+  Read (Str);
+  Read (chr);
+  Read (countWords);
+  Read (countVowel);
+  Read (lenghtStr);
+
+// length of the string
+
+WHILE (chr <> '.') DO
+    lenghtStr:=lenghtStr+1;
+    
+END_WHILE
+
+// number of words in the string
+
+
+FOR i FROM 0 TO lenghtStr-1 STEP 1  DO
+    IF (chr =" " and countWords>1 ) THEN
+        countWords:=countWords+1;
+
+         
+    END_IF
+
+END_FOR
+
+// number of vowels in the string 
+
+FOR i FROM 0 TO lenghtStr-1 STEP 1  DO
+    IF (Str[i] in [a,e,i,o,u,y,A,E,I,O,U,Y]) THEN
+       
+       countVowel:=countVowel+1;
+
+    END_IF
+END_FOR
+
+   
+END
